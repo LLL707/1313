@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>인공지능 소프트웨어 소개</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        #img-container {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+            visibility: hidden;
+        }
+
+        #img-container.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #img-container.hide {
+            opacity: 0;
+            visibility: hidden;
+        }
+    </style>
+    <script>
+        function show() {
+            const imgContainer = document.getElementById('img-container');
+            imgContainer.classList.add('show');
+            imgContainer.classList.remove('hide');
+        }
+        
+        function hide() {
+            const imgContainer = document.getElementById('img-container');
+            imgContainer.classList.add('hide');
+            setTimeout(() => {
+                imgContainer.classList.remove('show');
+            }, 500); // Ensure the transition completes before removing 'show'
+        }
+    </script>
+</head>
+<body>
+    <h3 onmouseover="show()" onmouseout="hide()">인공지능소프트웨어과</h3>
+    <hr>
+    <p>
+        머신러닝과 빅데이터, 소프트웨어를 이용하여 다양한 프로그램을 개발하는 인공지능 소프트웨어 전문가 양성
+    </p>
+    <div id="img-container">
+        <img id="fig" src="캡처.PNG" alt="서울 뉴칼라 스쿨 전공교과목 트랙">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- Google24*78 -->
